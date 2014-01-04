@@ -1,0 +1,33 @@
+{
+  "name": "Diqus-Slack_Notifier",
+  "description": "New disqus' comment notifier for Slack",
+  "version": "0.1.0",
+  "author": {
+    "name": "Jonathan Wiesel",
+    "email": "jonathanwiesel@gmail.com",
+    "url": "http://github.com/jonathanwiesel"
+  },
+  "keywords": [
+    "disqus",
+    "slack",
+    "comment",
+    "api",
+    "notify"
+  ],
+  "scripts": {
+    "start": "node app.js"
+  },
+  "licenses": [{
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/mit-license.php"
+  }],
+  "engines": {
+    "node": "0.10.24",
+    "npm":  "1.3.21"
+  },
+  "dependencies": {
+    "disqus":"0.1.0",
+    "cron":"1.0.1",
+    "node-slack":"0.0.3"
+  }
+}
