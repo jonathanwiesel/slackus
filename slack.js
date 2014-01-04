@@ -1,7 +1,7 @@
 var Slack = require('node-slack');
 var slack = new Slack(process.env.SLACK_DOMAIN,process.env.SLACK_TOKEN);
 
-var sendComment = function (data, callback) {
+var sendComment = function (data) {
 
     var response = JSON.parse(data);
     var responseLength = response.response.length;
@@ -43,8 +43,6 @@ var sendComment = function (data, callback) {
     }else{
         console.log('Nothing new to send');
     }
-
-    callback();
 }
 
 module.exports.sendComment = sendComment;

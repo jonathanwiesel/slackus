@@ -22,13 +22,12 @@ new cronJob('*/10 * * * * *', function (){
 
     disqus.request('posts/list', disqus_options, function(data) {
 
+        lastTimestamp = new Date();
         if(data.error) {
             console.log('Something went wrong...');
             console.log(data);
         }else{
-            slack.sendComment(data, function(){
-                lastTimestamp = new Date();
-            });
+            slack.sendComment(data);
         }
     });
 
