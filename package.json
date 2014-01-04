@@ -1,7 +1,7 @@
 {
   "name": "Diqus-Slack_Notifier",
   "description": "New disqus' comment notifier for Slack",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": {
     "name": "Jonathan Wiesel",
     "email": "jonathanwiesel@gmail.com",

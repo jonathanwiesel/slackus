@@ -19,7 +19,7 @@ var sendComment = function (data) {
 
             if(process.env.SLACK_CHANNEL_MENTION){
                 message += '\n Alerting ';
-                var mentionsVar = process.env.SLACK_CHANNEL_MENTION.split('-');
+                var mentionsVar = process.env.SLACK_CHANNEL_MENTION.split('.');
                 var mentions = '';
                 for(var j=0; j < mentionsVar.length; j++){
                     mentions += ' <!' + mentionsVar[j] + '>';
@@ -28,17 +28,20 @@ var sendComment = function (data) {
                 message += mentions;
             }
 
-            slack.send({
-                text: message,
-                channel: '#' + process.env.SLACK_CHANNEL
-            },function(error){
-                if(error){
-                    console.log('Something went wrong...');
-                    console.log(error);
-                }else{
-                    console.log('New Disqus comment!. Message sent to Slack channel.')
-                }
-            });
+            var channels = process.env.SLACK_CHANNEL.split('.');
+            for(var k=0; k < channels.length; k++){
+                slack.send({
+                    text: message,
+                    channel: '#' + channels[k]
+                },function(error){
+                    if(error){
+                        console.log('Something went wrong...');
+                        console.log(error);
+                    }else{
+                        console.log('New Disqus comment!. Message sent to Slack channel #' + channels[k]);
+                    }
+                });
+            }
         }
     }else{
         console.log('Nothing new to send');
