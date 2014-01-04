@@ -14,9 +14,9 @@ var disqus_options = {
     order: 'asc'
 };
 
-new cronJob('*/10 * * * * *', function (){
+var lastTimestamp = new Date();
 
-    var lastTimestamp = new Date();
+new cronJob('*/10 * * * * *', function (){
 
     disqus_options.since = lastTimestamp.toISOString();
 
@@ -26,7 +26,9 @@ new cronJob('*/10 * * * * *', function (){
             console.log('Something went wrong...');
             console.log(data);
         }else{
-            slack.sendComment(data);
+            slack.sendComment(data, function(){
+                lastTimestamp = new Date();
+            });
         }
     });
 

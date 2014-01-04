@@ -1,7 +1,7 @@
 var Slack = require('node-slack');
 var slack = new Slack(process.env.SLACK_DOMAIN,process.env.SLACK_TOKEN);
 
-var sendComment = function (data) {
+var sendComment = function (data, callback) {
 
     var response = JSON.parse(data);
     var responseLength = response.response.length;
@@ -16,6 +16,17 @@ var sendComment = function (data) {
             var message = '<' + comment.author.profileUrl + '|' + comment.author.name + '> created <'+ url +'|a new comment>';
             message += ' on entry <'+ comment.thread.link +'|' +  comment.thread.title + '>:\n';
             message += comment.raw_message;
+
+            if(process.env.SLACK_CHANNEL_MENTION){
+                message += '\n Alerting ';
+                var mentionsVar = process.env.SLACK_CHANNEL_MENTION.split('-');
+                var mentions = '';
+                for(var j=0; j < mentionsVar.length; j++){
+                    mentions += ' <!' + mentionsVar[j] + '>';
+                }
+
+                message += mentions;
+            }
 
             slack.send({
                 text: message,
@@ -32,6 +43,8 @@ var sendComment = function (data) {
     }else{
         console.log('Nothing new to send');
     }
+
+    callback();
 }
 
 module.exports.sendComment = sendComment;
