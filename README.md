@@ -26,3 +26,8 @@ This application was built using:
 * [node-slack](https://github.com/xoxco/node-slack)
 * [cron](https://github.com/ncb000gt/node-cron)
 
+***
+
+## License
+
+[http://jonathanwiesel.mit-license.org/](http://jonathanwiesel.mit-license.org/)
