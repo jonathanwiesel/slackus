@@ -13,9 +13,18 @@
     "DISQUS_API_ACCESS_TOKEN": "",
     "DISQUS_FORUM": "",
     "DISQUS_COMMENT_COUNT": "10",
-    "SLACK_DOMAIN": "",
+    "SLACK_DOMAIN": {
+      "description": "The prefix on your Slack company URL (prefix.slack.com)"
+    },
     "SLACK_TOKEN": "",
-    "SLACK_CHANNEL": "general",
-    "SLACK_CHANNEL_MENTION": "everyone"
+    "SLACK_CHANNEL": {
+      "description": "Separate multiple channels with dot (.)",
+      "value": "general"
+    },
+    "SLACK_CHANNEL_MENTION": {
+      "required": false,
+      "description": "People you want to mention when notification arrives. Separate multiple with dot (.)",
+      "value": "everyone"
+    }
   }
 }
