@@ -8,7 +8,9 @@ var Disqus = require('disqus'),
         forum: process.env.DISQUS_FORUM,
         related: 'thread',
         limit: process.env.DISQUS_COMMENT_COUNT
-    };
+    },
+    cron_time = '0 * * * * *';
 
 module.exports.disqus = disqus;
 module.exports.disqus_options = disqus_options;
+module.exports.cron_time = cron_time;

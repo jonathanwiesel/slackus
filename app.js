@@ -6,7 +6,7 @@ var cronJob  = require('cron').CronJob,
 
 var lastTimestamp = null;
 
-new cronJob('*/10 * * * * *', function (){
+new cronJob(D.cron_time, function (){
 
     D.disqus.request('posts/list', D.disqus_options, function(data) {
 
