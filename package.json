@@ -1,15 +1,20 @@
 {
   "name": "slackus",
-  "description": "New disqus' comment notifier for Slack",
+  "description": "New Disqus comment notifier for Slack",
   "version": "0.3.0",
   "author": {
     "name": "Jonathan Wiesel",
     "email": "jonathanwiesel@gmail.com",
-    "url": "http://github.com/jonathanwiesel"
+    "url": "https://github.com/jonathanwiesel"
   },
+  "contributors": [{
+    "name": "Joakim Stai",
+    "email": "joakimstai@gmail.com",
+    "url": "https://github.com/joakim"
+  }],
   "repository": {
     "type": "git",
-    "url": "https://github.com/jonathanwiesel/slackus.git"
+    "url": "https://github.com/kollegorna/slackus.git"
   },
   "keywords": [
     "disqus",
