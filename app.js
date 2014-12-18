@@ -27,7 +27,7 @@ new cronJob(D.cron_time, function (){
                                         slackus.sendMessage(messageWithMentions);
                                     })
                                 }else{
-                                    slackus.sendMessage(messageWithMentions);
+                                    slackus.sendMessage(message);
                                 }
                             });
 
