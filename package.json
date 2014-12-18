@@ -26,8 +26,7 @@
       "url": "http://www.opensource.org/licenses/mit-license.php"
   }],
   "engines": {
-    "node": "0.10.24",
-    "npm":  "1.3.21"
+    "node": "0.10.x"
   },
   "dependencies": {
     "disqus": "0.1.0",
