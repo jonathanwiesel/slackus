@@ -1,5 +1,8 @@
 #slackus
-***
+
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+
+
 This simple application monitors a Disqus forum and sends a notification to Slack channels when a new comment is made in said forum. Can be easily deployed to Heroku. You only need to set the following enviroment variables:
 
 ```

@@ -1,0 +1,21 @@
+{
+  "name": "Slackus Sample",
+  "description": "Disqus monitor and notification sender to Slack",
+  "repository": "https://github.com/jonathanwiesel/slackus",
+  "keywords": [
+    "slack",
+    "disqus",
+    "blog"
+  ],
+  "env": {
+    "DISQUS_API_KEY": "",
+    "DISQUS_API_SECRET": "",
+    "DISQUS_API_ACCESS_TOKEN": "",
+    "DISQUS_FORUM": "",
+    "DISQUS_COMMENT_COUNT": "10",
+    "SLACK_DOMAIN": "",
+    "SLACK_TOKEN": "",
+    "SLACK_CHANNEL": "general",
+    "SLACK_CHANNEL_MENTION": "everyone"
+  }
+}
