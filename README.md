@@ -32,7 +32,6 @@ Finally, you can set up an Incoming WebHook for Slack on
 https://my.slack.com/services/new/incoming-webhook.
 
 Optional environment variables:
-
 ```
 SLACKUS_INTERVAL=60       # Seconds between each check (60 by default)
 SLACKUS_DISQUS_LIMIT=25   # Number of comments to check (25 by default, max 100)
