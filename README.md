@@ -1,30 +1,47 @@
-#slackus
-***
-This simple application monitors a Disqus forum and sends a notification to Slack channels when a new comment is made in said forum. Can be easily deployed to Heroku. You only need to set the following enviroment variables:
-
-```
-DISQUS_API_KEY=disqus_api_key
-DISQUS_API_SECRET=api_secret
-DISQUS_API_ACCESS_TOKEN=api_access_token
-DISQUS_FORUM=your_disqus_forum
-DISQUS_COMMENT_COUNT=10
-SLACK_DOMAIN=jonathan                       # supposing the Slack URL is jonathan.slack.com
-SLACK_TOKEN=slack_token
-SLACK_CHANNEL=general.otherChannel          # separate multiple channels by a dot (.)
-SLACK_CHANNEL_MENTION=everyone.channel      # optional
-```
-
-The server will request every 10 seconds the 10 most recent comments (according to what's stated in the `DISQUS_COMMENT_COUNT` variable). If you consider that your forum could receive more than 10 new comments in a 10 second window, feel free to increase that variable's number.
-
-The `SLACK_CHANNEL_MENTION` variable is **optional**, it will mention those specified (separated by a dot). Remember `everyone` will mention every member on your team and `channel` will mention every member of the channel. (For now specific members are not supported since his ID is necessary, it's not enough with his name)
+# slackus
 
 ***
 
-##Notes
+This simple application monitors a Disqus forum (website) and sends a
+notification to a Slack channel when a new comment is made in said forum.
+Can be easily deployed to Heroku.
+
+To configure the application, either edit config.js or set the following
+environment variables:
+
+```
+SLACKUS_DISQUS_API_KEY=[your api key]
+SLACKUS_DISQUS_API_SECRET=[your api secret]
+SLACKUS_DISQUS_ACCESS_TOKEN=[your access token]
+SLACKUS_DISQUS_FORUM=[your forum's shortname]
+SLACKUS_SLACK_WEBHOOK=[your incoming webhook's url]
+```
+
+It's possible to check for comments on multiple forums simultaneously. To do so,
+enter their shortnames as a comma seperated list, for example `cats,stuff`.
+
+Optional environment variables:
+
+```
+SLACKUS_INTERVAL=60       # Seconds between each check (60 by default)
+SLACKUS_DISQUS_LIMIT=25   # Number of comments to check (25 by default, max 100)
+```
+
+The server will every X seconds (`SLACKUS_INTERVAL`) request the X most recent
+comments (`SLACKUS_DISQUS_LIMIT`) to check for new ones. If your forum may
+receive more than 25 new comments in a 60 second window, tweak those two
+variables to your liking.
+
+Some more configuration options for Disqus and Slack are available in config.js.
+
+
+***
+
+## Notes
+
 This application was built using:
-* [node-disqus](https://github.com/hay/node-disqus)
-* [node-slack](https://github.com/xoxco/node-slack)
-* [cron](https://github.com/ncb000gt/node-cron)
+* [disqus](https://github.com/hay/node-disqus)
+* [node-slack](https://github.com/chuga/node-slack) (chuga's fork)
 
 ***
 
