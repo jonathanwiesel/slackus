@@ -2,16 +2,19 @@ var Slackus = require('./lib/slackus.js'),
     config  = require('./config.js');
 
 // Check if the required configuration values have been set.
-var required = ['slack.webhook', 'disqus.forums',
+var required = [
+  'slack.webhook',
+  'disqus.forums',
   'disqus.authentication.api_secret',
   'disqus.authentication.api_key',
-  'disqus.authentication.access_token'].filter(function(config, path) {
-    var i, len;
-    for (i = 0, path = path.split('.'), len = path.length; i < len; i++) {
-      config = config[path[i]];
-    }
-    return !config;
-  }.bind(this, config));
+  'disqus.authentication.access_token'
+].filter(function(config, path) {
+  var i, len;
+  for (i = 0, path = path.split('.'), len = path.length; i < len; i++) {
+    config = config[path[i]];
+  }
+  return !config;
+}.bind(this, config));
 
 // Exit if missing required configuration.
 if (required.length) {
