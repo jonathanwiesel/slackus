@@ -25,6 +25,7 @@ Optional environment variables:
 ```
 SLACKUS_INTERVAL=60       # Seconds between each check (60 by default)
 SLACKUS_DISQUS_LIMIT=25   # Number of comments to check (25 by default, max 100)
+SLACKUS_SLACK_MENTION=joe # Users to mention when notification arrives
 ```
 
 The server will every X seconds (`SLACKUS_INTERVAL`) request the X most recent

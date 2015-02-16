@@ -23,6 +23,9 @@ config.disqus.authentication = {
 // See https://my.slack.com/services.
 config.slack.webhook = process.env.SLACKUS_SLACK_WEBHOOK;
 
+// Users to mention in Slack channel when notification arrives, comma separated.
+config.slack.mention = process.env.SLACKUS_SLACK_MENTION;
+
 // Additional options for messages posted to Slack (optional).
 // Overrides the webhook's settings, see Setup Instructions for your webhook.
 config.slack.options = {
