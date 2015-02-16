@@ -20,6 +20,15 @@ SLACKUS_SLACK_WEBHOOK=[your incoming webhook's url]
 It's possible to check for comments on multiple forums simultaneously. To do so,
 enter their shortnames as a comma seperated list, for example `cats,stuff`.
 
+Your Disqus API key, secret and access token can be found by creating an
+application on https://disqus.com/api/applications/.
+
+Your Disqus forum's shortname can be found on the settings page for your site
+(https://disqus.com/admin/, select your site under Settings).
+
+Finally, you can set up an Incoming WebHook for Slack on
+https://my.slack.com/services/new/incoming-webhook.
+
 Optional environment variables:
 
 ```

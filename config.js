@@ -20,7 +20,6 @@ config.disqus.authentication = {
 };
 
 // URL of your Slack Incoming WebHook (required).
-// See https://my.slack.com/services.
 config.slack.webhook = process.env.SLACKUS_SLACK_WEBHOOK;
 
 // Users to mention in Slack channel when notification arrives, comma separated.
