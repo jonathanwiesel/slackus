@@ -1,0 +1,36 @@
+{
+  "name": "Slackus Sample",
+  "description": "Disqus monitor and notification sender to Slack",
+  "repository": "https://github.com/jonathanwiesel/slackus",
+  "keywords": [
+    "slack",
+    "disqus",
+    "blog"
+  ],
+  "env": {
+    "SLACKUS_DISQUS_API_KEY": "",
+    "SLACKUS_DISQUS_API_SECRET": "",
+    "SLACKUS_DISQUS_ACCESS_TOKEN": "",
+    "SLACKUS_DISQUS_FORUM": {
+      "description": "Disqus forum(s) to check, specified by shortname, comma separated."
+    },
+    "SLACKUS_SLACK_WEBHOOK": {
+      "description": "URL of your Incoming WebHook in Slack."
+    },
+    "SLACKUS_INTERVAL": {
+      "required": false,
+      "description": "Number of seconds between each check (default 60).",
+      "value": "60",
+    },
+    "SLACKUS_DISQUS_LIMIT": {
+      "required": false,
+      "description": "The number of recent comments to check (default 25, max 100).",
+      "value": "25"
+    },
+    "SLACKUS_SLACK_MENTION": {
+      "required": false,
+      "description": "Users in Slack channel to mention when notification arrives, comma separated.",
+      "value": ""
+    }
+  }
+}
