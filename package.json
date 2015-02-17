@@ -1,12 +1,17 @@
 {
   "name": "slackus",
-  "description": "New disqus' comment notifier for Slack",
-  "version": "0.3.0",
+  "description": "New Disqus comment notifier for Slack",
+  "version": "1.0.0",
   "author": {
     "name": "Jonathan Wiesel",
     "email": "jonathanwiesel@gmail.com",
-    "url": "http://github.com/jonathanwiesel"
+    "url": "https://github.com/jonathanwiesel"
   },
+  "contributors": [{
+    "name": "Joakim Stai",
+    "email": "joakimstai@gmail.com",
+    "url": "https://github.com/joakim"
+  }],
   "repository": {
     "type": "git",
     "url": "https://github.com/jonathanwiesel/slackus.git"
@@ -19,19 +24,17 @@
     "notify"
   ],
   "scripts": {
-    "start": "node app.js"
+    "start": "node index.js"
   },
   "licenses": [{
       "type": "MIT",
       "url": "http://www.opensource.org/licenses/mit-license.php"
   }],
   "engines": {
-    "node": "0.10.24",
-    "npm":  "1.3.21"
+    "node": "0.10.x"
   },
   "dependencies": {
-    "disqus":"0.1.0",
-    "cron":"1.0.1",
-    "node-slack":"0.0.3"
+    "disqus": "0.1.0",
+    "node-slack": "git://github.com/chuga/node-slack#e8e7a3bb8e"
   }
 }
