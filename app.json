@@ -20,7 +20,7 @@
     "SLACKUS_INTERVAL": {
       "required": false,
       "description": "Number of seconds between each check (default 60).",
-      "value": "60",
+      "value": "60"
     },
     "SLACKUS_DISQUS_LIMIT": {
       "required": false,
