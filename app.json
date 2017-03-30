@@ -15,7 +15,7 @@
       "description": "Disqus forum(s) to check, specified by shortname, comma separated."
     },
     "SLACKUS_SLACK_WEBHOOK": {
-      "description": "URL of your Incoming WebHook in Slack."
+      "description": "URL of your Incoming WebHook in Slack. Can enter multiple comma seperated."
     },
     "SLACKUS_INTERVAL": {
       "required": false,

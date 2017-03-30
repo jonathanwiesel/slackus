@@ -20,6 +20,7 @@ config.disqus.authentication = {
 };
 
 // URL of your Slack Incoming WebHook (required).
+// To post to multiple Slack teams, enter the webhook URLs seperated by comma.
 config.slack.webhook = process.env.SLACKUS_SLACK_WEBHOOK;
 
 // Users to mention in Slack channel when notification arrives, comma separated.

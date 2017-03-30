@@ -22,6 +22,9 @@ SLACKUS_SLACK_WEBHOOK=[your incoming webhook's url]
 It's possible to check for comments on multiple forums simultaneously. To do so,
 enter their shortnames as a comma seperated list, for example `cats,stuff`.
 
+It's possible to post to multiple Slack webhooks simultaneously. To do so enter
+their webhook URLS as a comma seperated list.
+
 Your Disqus API key, secret and access token can be found by creating an
 application on https://disqus.com/api/applications/.
 
