@@ -1,5 +1,6 @@
 var Slackus = require('./lib/slackus.js'),
-    config  = require('./config.js');
+    config  = require('./config.js'),
+    http = require('http');
 
 // Check if the required configuration values have been set.
 var required = [
@@ -26,6 +27,10 @@ if (required.length) {
 // Fallback to defaults.
 config.disqus.limit = config.disqus.limit || 25;
 config.interval = config.interval || 60;
+
+setInterval(function() {
+    http.get(process.env.SLACKUS_KEEPALIVE_URL);
+}, 300000);
 
 // Start checking!
 var slackus = new Slackus(config);
