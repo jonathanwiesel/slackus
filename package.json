@@ -7,11 +7,13 @@
     "email": "jonathanwiesel@gmail.com",
     "url": "https://github.com/jonathanwiesel"
   },
-  "contributors": [{
-    "name": "Joakim Stai",
-    "email": "joakimstai@gmail.com",
-    "url": "https://github.com/joakim"
-  }],
+  "contributors": [
+    {
+      "name": "Joakim Stai",
+      "email": "joakimstai@gmail.com",
+      "url": "https://github.com/joakim"
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/jonathanwiesel/slackus.git"
@@ -26,15 +28,17 @@
   "scripts": {
     "start": "node index.js"
   },
-  "licenses": [{
+  "licenses": [
+    {
       "type": "MIT",
       "url": "http://www.opensource.org/licenses/mit-license.php"
-  }],
+    }
+  ],
   "engines": {
     "node": "0.10.x"
   },
   "dependencies": {
-    "disqus": "0.1.0",
+    "disqus": "^0.3.0",
     "node-slack": "git://github.com/chuga/node-slack#e8e7a3bb8e"
   }
 }
